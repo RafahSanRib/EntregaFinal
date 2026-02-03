@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+h1{
+    background-color: aqua;
+    padding: 10px;
+    border: 1px dash;
+}
+.topo{
+    font-size: 36px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.conteudo{
+    padding: 20px;
+}
+.conteudo h2{
+    color: green;
+    text-align: center;
+}
+#estudo{
+    color:orange;
+}
+h2,h3{
+    text-transform: uppercase;
+}
