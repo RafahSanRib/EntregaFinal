@@ -1,0 +1,253 @@
+/* 🎨 Variáveis CSS globais para manter consistência nas cores */
+:root {
+  --verde-principal: #4caf50;
+  --verde-escuro: #388e3c;
+  --cinza-claro: #f4f7f6;
+  --cinza-medio: #e0e0e0;
+  --branco: #ffffff;
+  --preto: #333;
+}
+ 
+/* 🌐 Estilos gerais do corpo da página */
+body {
+  font-family: "Segoe UI", sans-serif; /* Fonte suave e legível */
+  background-color: var(--cinza-claro); /* Cor de fundo suave */
+  color: var(--preto); /* Cor padrão do texto */
+  margin: 0;
+  padding: 0;
+  display: grid; /* Usa Grid para estruturar header, main e footer */
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh; /* Garante altura mínima da tela */
+}
+ 
+/* 🧱 Layout das seções principais */
+.site-header,
+.site-main,
+.site-footer {
+  max-width: 960px; /* Largura máxima centralizada */
+  margin: 0 auto;
+  padding: 20px;
+}
+ 
+/* 🔝 Cabeçalho estilizado com gradiente e destaque */
+.site-header {
+  grid-area: header;
+  background: linear-gradient(135deg, var(--verde-principal), var(--verde-escuro));
+  color: var(--branco);
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 5px solid var(--verde-escuro);
+  border-radius: 0 0 12px 12px;
+}
+ 
+/* Título principal do cabeçalho */
+.site-header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #222; /* Sombra para melhor leitura */
+}
+ 
+/* Subtítulo no cabeçalho */
+.site-header p {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+ 
+/* 🔗 Navegação principal estilizada com Flexbox */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+ 
+.main-nav li {
+  margin: 10px;
+}
+ 
+.main-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: var(--verde-escuro);
+  color: var(--branco);
+  transition: background-color 0.3s;
+}
+ 
+/* Efeito hover nos links do menu */
+.main-nav a:hover {
+  background-color: #2e7d32;
+}
+ 
+/* 📄 Conteúdo principal com Grid e destaque visual */
+.site-main {
+  display: grid;
+  grid-area: main;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  min-width: 60%;
+  background-color: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  margin-top: 30px;
+}
+ 
+/* Seções internas do conteúdo com espaçamento */
+.content-section {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+ 
+/* Título das seções */
+.content-section h2 {
+  font-size: 2em;
+  border-bottom: 2px solid var(--cinza-medio);
+  padding-bottom: 10px;
+  color: var(--verde-escuro);
+}
+ 
+/* 📊 Tabela com estilo moderno e responsivo */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+ 
+th,
+td {
+  padding: 12px;
+  border: 1px solid var(--cinza-medio);
+  text-align: left;
+}
+ 
+th {
+  background-color: var(--verde-principal);
+  color: var(--branco);
+}
+ 
+/* Alternância de cor para linhas pares da tabela */
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+ 
+/* 🐶 Galeria de imagens com Grid responsivo */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+ 
+.grade img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+ 
+/* Efeito de zoom ao passar o mouse nas imagens */
+.grade img:hover {
+  transform: scale(1.05);
+}
+ 
+/* 🔘 Botões com estilo amigável */
+button {
+  background-color: var(--verde-principal);
+  color: var(--branco);
+  border: none;
+  padding: 10px 16px;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+ 
+button:hover {
+  background-color: var(--verde-escuro);
+}
+ 
+/* 📥 Campos de entrada */
+input[type="text"],
+input[type="number"] {
+  padding: 8px;
+  border: 1px solid var(--cinza-medio);
+  border-radius: 6px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+ 
+/* 📝 Áreas onde os resultados são exibidos */
+#resultado-raças,
+#dica-texto,
+#resultado-conversao {
+  margin-top: 15px;
+  font-weight: bold;
+}
+ 
+/* 🔚 Rodapé com contraste e destaque */
+.site-footer {
+  grid-area: footer;
+  background-color: var(--preto);
+  color: var(--cinza-claro);
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+  border-top: 5px solid var(--verde-principal);
+  width: 100%;
+  box-sizing: border-box;
+}
+ 
+/* 📱 Media queries para tornar o layout responsivo */
+ 
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  .site-main {
+    padding: 20px;
+  }
+ 
+  .content-section h2 {
+    font-size: 1.6em;
+  }
+ 
+  .site-header h1 {
+    font-size: 2em;
+  }
+ 
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .main-nav li {
+    margin: 5px 0;
+  }
+}
+ 
+/* Para telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+ 
+  button {
+    width: 100%;
+  }
+}
+ 

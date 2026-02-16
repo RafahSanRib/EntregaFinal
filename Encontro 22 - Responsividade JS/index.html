@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- ATIVIDADE 1 – META VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto Responsivo Completo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Web Responsiva</h1>
+
+    <!-- ATIVIDADE 2 – MENU HAMBURGER -->
+    <button class="menu-toggle">☰</button>
+
+    <nav class="menu">
+        <a href="#">Home</a>
+        <a href="#">Galeria</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <!-- ATIVIDADE 4 – CARDS RESPONSIVOS -->
+    <section class="cards">
+        <article class="card">Card 1</article>
+        <article class="card">Card 2</article>
+        <article class="card">Card 3</article>
+    </section>
+
+    <!-- ATIVIDADE 3 – IMAGEM RESPONSIVA -->
+    <section class="card">
+        <h2>Imagem Responsiva</h2>
+
+        <picture>
+            <source media="(min-width:1024px)" srcset="img/img-desktop.jpg">
+            <source media="(min-width:600px)" srcset="img/img-tablet.jpg">
+            <img src="img/img-mobile.jpg"
+                 alt="Imagem adaptável"
+                 loading="lazy">
+        </picture>
+    </section>
+
+    <!-- ATIVIDADE 3 – VÍDEO RESPONSIVO -->
+    <section class="card">
+        <h2>Vídeo Responsivo</h2>
+        <div class="video">
+            <video controls preload="metadata">
+                <source src="video/exemplo.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- ATIVIDADE 4 – FORMULÁRIO -->
+    <section class="card">
+        <h2>Formulário</h2>
+        <form class="form">
+            <input type="text" placeholder="Nome">
+            <input type="email" placeholder="Email">
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- ATIVIDADE 4 – TABELA RESPONSIVA -->
+    <section class="card">
+        <h2>Tabela</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Produto">Notebook</td>
+                        <td data-label="Preço">R$ 3.000</td>
+                        <td data-label="Status">Ativo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ATIVIDADE 4 – MODAL -->
+    <button class="btn" id="openModal">Abrir Modal</button>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <p>Modal responsivo</p>
+            <button class="btn" id="closeModal">Fechar</button>
+        </div>
+    </div>
+
+    <!-- ATIVIDADE 4 – CARROSSEL -->
+    <section class="carousel">
+        <button class="prev">‹</button>
+        <div class="slides">
+            <div class="slide">Slide 1</div>
+            <div class="slide">Slide 2</div>
+            <div class="slide">Slide 3</div>
+        </div>
+        <button class="next">›</button>
+    </section>
+
+</main>
+
+<footer class="footer">
+    © Projeto Responsivo
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

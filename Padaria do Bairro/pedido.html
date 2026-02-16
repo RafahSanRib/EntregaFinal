@@ -1,118 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedido</title>
+    <title>Pedido | Padaria Ebenezer</title>
+    <link rel="stylesheet" href="./css/pedido.css">
 </head>
 
 <body>
-    <header>
-        <h1 align="">Padaria Ebenezer</h1>
-        <p>Tradição e sabor de caseiro! Que alegra o coração desde infância!</p>
-        <img src="fachada/ChatGPT Image 19 de jan. de 2026, 22_21_38.jpg" width="800" height="500">
-        <nav>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <img src="/EntregaFinal/Padaria do Bairro/logo/logo.jpg"
+             alt="Logo da Padaria Ebenezer"
+             class="header-logo">
+
+        <h1>Padaria Ebenezer</h1>
+        <p>Tradição e sabor caseiro que aquecem o coração desde a infância ❤️</p>
+
+        <nav class="main-nav" aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contato.html">Contato</a></li>
-                <li><a href="pedido.html">Pedido</a></li>
+                <li><a href="pedido.html" class="ativo">Pedido</a></li>
                 <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
             </ul>
         </nav>
     </header>
-    <form action="/processa-dados" method="post">
-        <section>
+
+    <!-- CONTEÚDO -->
+    <main class="pedido-container">
+
+        <section class="pedido-intro">
+            <h2>Faça seu pedido com a gente 🍞</h2>
+            <p>
+                Leva menos de 1 minuto! Informe os detalhes abaixo e nós cuidamos
+                do resto com muito carinho e ingredientes selecionados.
+            </p>
+        </section>
+
+        <!-- FORMULÁRIO -->
+        <form class="pedido-form" action="/processa-dados" method="post">
+
+            <!-- CLIENTE -->
             <fieldset>
-                <h2>Dados do Cliente</h2>
+                <legend>👤 Dados do Cliente</legend>
 
-                <label for="nome">Nome: </label>
-                <input type="text" id="nome" name="nome" required><br><br>
-                <label for="telefone">Telefone: </label>
-                <input type="number" id="telefone" telefone="Telefone" required><br><br>
-                <label for="email">E-mail: </label>
-                <input type="text" id="email" email="E-mail" required><br><br>
-                </fieldet>
-        </section>
-        <fieldset>
-            <section aria-labelledby="secao-detalhes-pedido">
-                <h2 id="secao-detalhes-pedido">Detalhes do Pedido</h2>
-                <!-- Tipo de Produto -->
-                <legend>🍰 Tipo de produto</legend>
-                <label><input type="radio" name="tipo_produto" value="bolo" required>Bolo
-                </label>
-                <label><input type="radio" name="tipo_produto" value="torta">
-                    Torta
-                </label>
-                <label>
-                    <input type="radio" name="tipo_produto" value="salgados">
-                    Salgados
-                </label>
-        </fieldset>
-        <!-- Sabor / Recheio -->
-        <fieldset>
-            <legend>🍫 Sabor / Recheio</legend>
-            <label for="sabor">Escolha o sabor:</label>
-            <select name="sabor" id="sabor" required>
-                <option value="">Selecione</option>
-                <option value="chocolate">Chocolate</option>
-                <option value="morango">Morango</option>
-                <option value="baunilha">Baunilha</option>
-                <option value="doce_de_leite">Doce de Leite</option>
-                <option value="outro">Outro</option>
-            </select>
-        </fieldset>
-        <!-- Tamanho -->
-        <fieldset>
-            <legend>📏 Tamanho</legend>
-            <label>
-                <input type="radio" name="tamanho" value="pequeno" required>
-                Pequeno
-            </label>
-            <label>
-                <input type="radio" name="tamanho" value="medio">
-                Médio
-            </label>
-            <label>
-                <input type="radio" name="tamanho" value="grande">
-                Grande
-            </label>
-        </fieldset>
-        <!-- Data de Entrega -->
-        <fieldset>
-            <legend>📅 Data de entrega</legend>
-            <label for="data_entrega">Escolha a data:</label>
-            <input type="date" id="data_entrega" name="data_entrega" required>
-        </fieldset>
-        </section>
-        <fieldset>
-            <section aria-labelledby="secao-informacoes-adicionais">
-                <h2 id="secao-informacoes-adicionais">
-                    Informações Adicionais
-                </h2>
-                <form>
-                    <!-- Observações Especiais -->
-                    <fieldset>
-                        <legend>📝 Observações especiais</legend>
-                        <label for="observacoes">
-                            Descreva aqui alguma preferência ou detalhe importante:
-                        </label>
-                        <textarea id="observacoes" name="observacoes" rows="4"
-                            placeholder="Ex: sem açúcar, decoração temática, alergias..."></textarea>
-                    </fieldset>
-                    <!-- Orçamento Máximo -->
-                    <fieldset>
-                        <legend>💵 Orçamento máximo</legend>
-                        <label for="orcamento">
-                            Informe o valor máximo (R$):
-                        </label>
-                        <input type="number" id="orcamento" name="orcamento" min="0" step="0.01"
-                            placeholder="Ex: 150.00">
-                    </fieldset>
-                </form>
-            </section>
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome"
+                       placeholder="Ex: Maria Silva" required>
 
-    </form>
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" name="telefone"
+                       placeholder="(12) 91234-5678" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email"
+                       placeholder="seuemail@email.com" required>
+            </fieldset>
+
+            <!-- PEDIDO -->
+            <fieldset>
+                <legend>🍰 Detalhes do Pedido</legend>
+
+                <p class="fieldset-title">Tipo de Produto</p>
+                <label><input type="radio" name="tipo_produto" value="bolo" required> Bolo</label>
+                <label><input type="radio" name="tipo_produto" value="torta"> Torta</label>
+                <label><input type="radio" name="tipo_produto" value="salgados"> Salgados</label>
+
+                <label for="sabor">Sabor / Recheio</label>
+                <select id="sabor" name="sabor" required>
+                    <option value="">Selecione uma opção</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="morango">Morango</option>
+                    <option value="baunilha">Baunilha</option>
+                    <option value="doce_de_leite">Doce de Leite</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <p class="fieldset-title">Tamanho</p>
+                <label><input type="radio" name="tamanho" value="pequeno" required> Pequeno</label>
+                <label><input type="radio" name="tamanho" value="medio"> Médio</label>
+                <label><input type="radio" name="tamanho" value="grande"> Grande</label>
+
+                <label for="data_entrega">Data de entrega</label>
+                <input type="date" id="data_entrega" name="data_entrega" required>
+            </fieldset>
+
+            <!-- EXTRAS -->
+            <fieldset>
+                <legend>📝 Informações Adicionais</legend>
+
+                <label for="observacoes">Observações especiais</label>
+                <textarea id="observacoes" name="observacoes" rows="4"
+                    placeholder="Ex: sem açúcar, decoração temática, alergias..."></textarea>
+
+                <label for="orcamento">Orçamento máximo (opcional)</label>
+                <input type="number" id="orcamento" name="orcamento"
+                       min="0" step="0.01" placeholder="Ex: 150,00">
+            </fieldset>
+
+            <button type="submit" class="btn-enviar">
+                🍞 Confirmar Pedido
+            </button>
+
+            <p class="form-footer">
+                Retornamos o contato rapidamente para confirmar os detalhes 💬
+            </p>
+
+        </form>
+    </main>
+
 </body>
-
 </html>

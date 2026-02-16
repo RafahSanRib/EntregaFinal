@@ -1,0 +1,218 @@
+/* ================= BASE ================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7efe5;
+    color: #333;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #905d15;
+}
+
+.header-logo {
+    max-width: 220px;
+    margin-bottom: 10px;
+}
+
+.main-header h1 {
+    margin: 10px 0 5px;
+    color: #905d15;
+}
+
+.main-header p {
+    font-size: 15px;
+}
+
+/* ================= NAV ================= */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #fff;
+    background: #905d15;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.main-nav a:hover,
+.main-nav .ativo {
+    background: #6f4510;
+}
+
+/* ================= CONTEÚDO ================= */
+.pedido-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.pedido-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pedido-intro h2 {
+    color: #905d15;
+}
+
+/* ================= FORM ================= */
+.pedido-form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,.12);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 25px;
+}
+
+legend {
+    font-weight: bold;
+    color: #905d15;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #905d15;
+    box-shadow: 0 0 6px rgba(144,93,21,.4);
+}
+
+input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.fieldset-title {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* ================= BOTÃO ================= */
+.btn-enviar {
+    width: 100%;
+    padding: 16px;
+    background: #905d15;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background: #6f4510;
+    transform: translateY(-1px);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+/* ================= RODAPÉ ================= */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.main-footer {
+    background-color: #222;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 2px solid #444;
+}
+
+/* ==================================================
+   TEXTO DO FOOTER
+================================================== */
+.main-footer p {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+/* ==================================================
+   ENDEREÇO
+================================================== */
+.main-footer address {
+    font-style: normal; /* Remove itálico padrão */
+    margin-bottom: 15px;
+}
+
+/* LINK DENTRO DO ADDRESS */
+.main-footer address a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.main-footer address a:hover {
+    text-decoration: underline;
+}
+
+/* ==================================================
+   NAVEGAÇÃO DO FOOTER
+================================================== */
+.main-footer .footer-nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.85em;
+}
+
+.main-footer .footer-nav a:hover {
+    color: #4CAF50;
+}
+.tabela-centralizada {
+    display: flex;
+    justify-content: center;   /* centraliza horizontal */
+    align-items: center;       /* centraliza vertical */
+    min-height: 100vh;         /* ocupa altura da tela */
+}

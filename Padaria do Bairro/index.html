@@ -13,38 +13,51 @@
 </head>
 
 <body>
-    <header>
-        <h1 align="">Padaria Ebenezer</h1>
-        <p>Tradição e sabor de caseiro! Que alegra o coração desde infância!</p>
-        <img src="fachada/ChatGPT Image 19 de jan. de 2026, 22_21_38.jpg" width="800" height="500">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="pedido.html">Pedido</a></li>
-                <li><a href="cadastro.html">Cadastro</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <img src="/EntregaFinal/Padaria do Bairro/logo/logo.jpg" class="header-logo">
+        <section class="secao-destaque">
+            <div class="container">
+                <h1 align="">Padaria Ebenezer</h1>
+                <p>Tradição e sabor de caseiro! Que alegra o coração desde infância!</p>
+               
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="pedido.html">Pedido</a></li>
+                        <li><a href="cadastro.html">Cadastro</a></li>
+                        <li><a href="feedback.html">feedback</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
     </header>
     <main>
-        <section>
+        <section class="secao-sobre">
+            <div class="principal"></div>
             <h2>Nossa História</h2>
             <p>
+                
+                <div class="texto-1">
                 Fundada em XXXX, a Padaria Ebenezer nasceu do sonho do Sr. José de
                 levar pães frescos e doces caseiros para a comunidade.
                 Com receitas passadas de geração em geração, mantemos a
                 essência do sabor artesanal e o carinho em cada produto.
+                </div>
             </p>
             <h2>Nossa Missão</h2>
             <p>
+                <div class="texto-2">
                 Oferecer produtos de panificação e confeitaria de alta qualidade,
                 feitos com ingredientes selecionados e muito amor,
                 proporcionando momentos deliciosos e acolhedores
                 para nossos clientes.
+                </div>
             </p>
+            </div30512>
         </section>
         <!--Produtos Disponíveis-->
-        <section>
+        <section class="secao-produtos">
             <h2>Nossos Produtos</h2>
             <img src="vitrine/produtos-da-padaria.png" width="800" height="500">
             <h3>Pães Tradicionais e Especiais</h3>
@@ -57,8 +70,9 @@
                 <li>Doces e tortas artesanais</li>
             </ul>
         </section>
+
         <!--Diferenciais-->
-        <section>
+        <section class="nossos-diferenciais">
             <h2>Nossos Diferenciais</h2>
             <ul>
                 <li>Receitas artesanais tradicionais</li>
@@ -67,16 +81,6 @@
                 <li>Atendimento familiar e acolhedor</li>
             </ul>
         </section>
-        <style>
-            th {
-                background-color: #2c5036;
-                /* cor do fundo */
-                color: #ffffff;
-                /* cor do texto */
-                padding: 10px;
-                text-align: left;
-            }
-        </style>
         <section>
             <table border="1" width="45%" align="center" cellpadding="20" cell spacing="10">
                 <h2 align="center"> 📋 Tabela de Cardápio</h2>
@@ -88,6 +92,7 @@
                         <th>Produto</th>
                         <th>Descrição Breve</th>
                         <th>Preço</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -203,17 +208,87 @@
                     </tr>
             </table>
         </section>
+        <section class="videos">
+            <h2>Nossa Tradição em Vídeo</h2>
+            <p>Assista ao vídeo e sinta a paixão que colocamos em cada receita.</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QP_H8A06BGo?si=ZbZe2tJUj_pl73dV"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><em>(Nota: Este é um vídeo de exemplo do YouTube sobre panificação para fins demonstrativos.)</em></p>
+            <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fp9DvCDVzEU?si=XohFiswQ1vB5rcLb"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><em>(Nota: Este é um vídeo de exemplo do YouTube sobre panificação para fins demonstrativos.)</em></p>
+
+            <iframe width="615" height="354" src="https://www.youtube.com/embed/k8yn_p-I0aY"
+                title="Essa receita de carne é perfeita para seu almoço ou jantar" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <iframe width="586" height="338" src="https://www.youtube.com/embed/vO2cR7DoUKE"
+                title="Segredos de uma carne suculenta!" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section class="depoimentos-section">
+                <h2>O que nossos clientes dizem</h2>
+                <div class="depoimentos-container">
+                    <div class="depoimento-card">
+                        <p>"Os melhores pães da região!"</p>
+                        <cite>- Maria Silva</cite>
+                    </div>
+                    <!-- Mais depoimentos... -->
+                </div>
+            </section>
     </main>
-    <!--Localização e Horários-->
+    <section>
+        <!--Localização e Horários-->
+       <h3 class=".main-header">Horários de Funcionamento</h3>
+        <!-- <ol>
+                <li>Segunda a Sexta 07hs as 22hs</li>
+                <li>Sábado e Domingo 08hs as 19hs</li>
+            </ol> -->
+
+        <table border="1" style="border-collapse: collapse;" class="tabela-centralizada">
+            <thead class=".main-header">
+                <tr>
+                    <th class=".tabela-horarios">Dia da Semana</th>
+                    <th class=".tabela-horarios">Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class=".tabela-horarios">Segunda a Sexta</td>
+                    <td class=".tabela-horarios">6h às 19h</td>
+                </tr>
+                <tr>
+                    <td class=".tabela-horarios">Sábados</td>
+                    <td class=".tabela-horarios">6h às 18h</td>
+                </tr>
+                <tr>
+                    <td class=".tabela-horarios">Domingos e Feriados</td>
+                    <td class=".tabela-horarios">7h às 12h</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </section>
+
     <footer class="main-footer">
-        <h2>📍 Localização e 🕒 Horário</h2>
-        <p>📫 Endereço: Rua das Flores, 123 - Centro, Sua Cidade</p>
-        <p>🕰️ Horário de Funcionamento:</p>
-        <ul>
-            <li>Segunda a Sexta: 7h às 19h</li>
-            <li>Sábado: 7h às 18h</li>
-            <li>Domingo: 09 às 14</li>
-        </ul>
+        <p>&copy; 2026 Padaria do Bairro. Todos os direitos Reservados</p>
+        <address>
+            Contato: <a href="mailto:rsr.ebenezer.hc@gmail.com"> rsr.ebenezer.hc@gmail.com</a><br>
+            <p>Estamos localizados na Rua das Flores, 123 - Centro, Campina Grande - PB. Venha nos visitar!</p>
+            <p><a href="https://maps.app.goo.gl/google.com" target="_blank">Ver no google maps</a></p>
+        </address>
+        <nav class="footer-nav">
+            <a href="#">Política de Privacidade </a> | <a href="#">Termos de Uso</a>
+        </nav>
     </footer>
 </body>
 

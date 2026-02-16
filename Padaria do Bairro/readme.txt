@@ -2,7 +2,10 @@ Usado tag padrões do corpo HTML
 Usado SRC IMagem e Videos
 Usado Tabelas com as descrições colunas e linhas
 Usado semanticas
-Lista ordenadas e não ordenasa
+Lista ordenadas e não ordenadas
+Usado Formulário
+Usado CSS
+Novas tags
 
 
  <h2>Entre em contato conosco</h2>

@@ -1,0 +1,187 @@
+/* --- Atividade 1: Reset e Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Atividade 3: Transições suaves */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* --- Atividade 3: Header Fixo --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000; /* Atividade 4: Camada superior */
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.header-logo { height: 60px; }
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+/* --- Atividade 2: Posicionamento Banner --- */
+.secao-banner {
+    margin-top: 80px; /* Compensa o header fixo */
+}
+
+.banner-container {
+    position: relative; /* Atividade 2: Relative no container */
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-texto {
+    position: absolute; /* Atividade 2: Absolute no filho */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* --- Atividade 2: Selos nos Produtos --- */
+.vitrine-container {
+    position: relative;
+    display: inline-block;
+}
+
+.selo-qualidade {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e67e22;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+/* --- Atividade 4: Tooltip (Z-index) --- */
+.tooltip-trigger {
+    position: relative;
+    cursor: help;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    bottom: 110%;
+    left: 0;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 100;
+}
+
+.tooltip-trigger:hover .tooltip-text {
+    visibility: visible;
+}
+
+/* --- Atividade 3: Botões Fixos --- */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.btn-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+/* --- Atividade 5: Sticky e Responsividade --- */
+.secao-produtos h2 {
+    position: sticky; /* Atividade 5: Sticky */
+    top: 80px;
+    background: #f9f9f9;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.table-responsive {
+    overflow-x: auto; /* Garante que a tabela não quebre no celular */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Media Query para Telas Pequenas (Atividade 5) */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-texto h1 { font-size: 1.5rem; }
+    
+    .img-vitrine {
+        width: 100%;
+        height: auto;
+    }
+}

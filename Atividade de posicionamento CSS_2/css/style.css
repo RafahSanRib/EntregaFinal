@@ -1,0 +1,172 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GERAL */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* ================= HEADER FIXO ================= */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #8b4513;
+    color: white;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.menu ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ================= BANNER ================= */
+.banner {
+    margin-top: 100px;
+    height: 300px;
+    background: #d2691e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= PRODUTOS ================= */
+.produtos {
+    padding: 40px;
+}
+
+.lista-produtos {
+    display: flex;
+    gap: 30px;
+}
+
+.produto {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+.selo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.selo.destaque {
+    background: green;
+}
+
+/* ================= WHATSAPP FIXO ================= */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 50%;
+    z-index: 900;
+}
+
+/* ================= BOTÃO TOPO ================= */
+.topo {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    background: black;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* ================= MODAL + OVERLAY ================= */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.overlay:target {
+    display: flex;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.fechar {
+    display: inline-block;
+    margin-top: 15px;
+    color: red;
+}
+
+/* ================= RODAPÉ ================= */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    .lista-produtos {
+        flex-direction: column;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+}
+
+.unidade-viewport {
+    background-color: #e0ffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #00ced1;
+}
+
+.full-height-div {
+    width: 80%;                 /* Para que não ocupe a largura toda e possamos ver o fundo */
+    height: 50vh;               /* 50% da altura da janela de visualização */
+    background-color: #87cefa;
+    display: flex;              /* Para centralizar o texto */
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;          /* Centraliza horizontalmente */
+    border: 1px solid #4682b4;
+    text-align: center;
+}
+
+.full-width-text {
+    font-size: 5vw;             /* 5% da largura da janela de visualização */
+    text-align: center;
+    margin-top: 20px;
+    word-wrap: break-word;      /* Quebra texto longo para caber */
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Padaria Exemplo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- HEADER FIXO -->
+    <header class="header">
+        <h1>Padaria Ebenezer</h1>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#banner">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#rodape">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BANNER -->
+    <section id="banner" class="banner">
+        <h2>Pães quentinhos todos os dias</h2>
+        <p>Qualidade e sabor para sua família</p>
+    </section>
+
+    <!-- PRODUTOS -->
+    <main>
+        <section id="produtos" class="produtos">
+            <h2>Nossos Produtos</h2>
+
+            <div class="lista-produtos">
+                <article class="produto">
+                    <span class="selo">Novo</span>
+                    <img src="https://via.placeholder.com/200" alt="Pão Francês">
+                    <h3>Pão Francês</h3>
+                </article>
+
+                <article class="produto">
+                    <span class="selo destaque">Oferta</span>
+                    <img src="https://via.placeholder.com/200" alt="Bolo Caseiro">
+                    <h3>Bolo Caseiro</h3>
+                </article>
+            </div>
+        </section>
+        <section class="depoimentos-section">
+                <h2>O que nossos clientes dizem</h2>
+                <div class="depoimentos-container">
+                    <div class="depoimento-card">
+                        <p>"Os melhores pães da região!"</p>
+                        <cite>- Maria Silva</cite>
+                    </div>
+                    <!-- Mais depoimentos... -->
+                </div>
+            </section>
+    </main>
+
+    <!-- BOTÃO WHATSAPP FIXO -->
+    <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank">
+        WhatsApp
+    </a>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <a href="#banner" class="topo">↑</a>
+
+    <!-- MODAL -->
+    <div id="modal" class="overlay">
+        <div class="modal">
+            <h2>Promoção</h2>
+            <p>Pão francês com desconto hoje!</p>
+            <a href="#" class="fechar">Fechar</a>
+        </div>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer id="rodape">
+        <p>© 2026 - Padaria Exemplo</p>
+    </footer>
+
+</body>
+</html>
