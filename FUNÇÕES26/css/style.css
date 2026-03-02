@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    background-color: azure;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+#valor{
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.botoes button{
+    padding: 10px 15px;
+    margin: 5px;
+    font-size:  16px;
+    cursor: pointer;
+}

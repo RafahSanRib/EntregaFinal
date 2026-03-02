@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Pedidos - Padaria Ebenezer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/sispedido.css">
+     
+</head>
+
+<body>
+
+<header>
+    <h1>🍞 Padaria Ebenezer</h1>
+    <p>Sistema de Pedidos Online</p>
+    <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="pedido.html">Pedido</a></li>
+                        <li><a href="sispedido.html">Sistema de Pedido</a></li>
+                        <li><a href="cadastro.html">Cadastro</a></li>
+                        <li><a href="feedback.html">feedback</a></li>
+                    </ul>
+                </nav>
+</header>
+
+<main>
+
+    <!-- FORMULÁRIO -->
+    <div class="card">
+        <h2>📝 Fazer Pedido</h2>
+
+        <form id="pedidoForm">
+
+            <label>Nome do Cliente</label>
+            <input type="text" id="nome" required>
+
+            <label>Tipo de Produto</label>
+            <select id="tipo" required>
+                <option value="">Selecione</option>
+                <option value="bolo">Bolo</option>
+                <option value="torta">Torta</option>
+                <option value="salgados">Salgados</option>
+            </select>
+
+            <label>Tamanho</label>
+            <select id="tamanho" required>
+                <option value="">Selecione</option>
+                <option value="pequeno">Pequeno</option>
+                <option value="medio">Médio</option>
+                <option value="grande">Grande</option>
+            </select>
+
+            <button type="submit">Confirmar Pedido</button>
+
+        </form>
+    </div>
+
+    <!-- CARRINHO -->
+    <div class="card">
+        <h2>🛒 Carrinho</h2>
+        <div id="listaPedidos"></div>
+        <button onclick="limparCarrinho()">Limpar Carrinho</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="card dashboard">
+        <h2>📊 Dashboard</h2>
+        <p>Total de Pedidos: <span id="totalPedidos">0</span></p>
+        <p>Faturamento Total: <span id="faturamento">R$ 0,00</span></p>
+    </div>
+
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
